@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "vuepress": "^1.9.10"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "name": "til",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mihyunLee/TIL.git",
+  "author": "Nor <51310674+mihyunLee@users.noreply.github.com>",
+  "license": "MIT"
+}
