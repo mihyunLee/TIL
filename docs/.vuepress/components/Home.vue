@@ -32,6 +32,7 @@
 
 <style scoped>
 h1 span {
+  font-family: "Tenada";
   color: #acb1b7;
 }
 
