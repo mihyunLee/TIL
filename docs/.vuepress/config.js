@@ -21,6 +21,20 @@ module.exports = {
   },
   //레파지토리 이름 넣기
   base: "/TIL/",
+  markdown: {
+    lineNumbers: true,
+    extendMarkdown: (md) => {
+      md.use(require("markdown-it-task-lists"));
+    },
+  },
+  plugins: [
+    [
+      "vuepress-plugin-code-copy",
+      {
+        color: "#acb1b7",
+      },
+    ],
+  ],
 };
 
 /** 카테고리 자동 추가 */
