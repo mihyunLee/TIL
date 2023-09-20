@@ -1,17 +1,10 @@
 const getSidebarArr = require("./getSidebarArr");
+const CONSTANT = require("./constants");
 
 module.exports = {
   title: "Today Nor Learned",
   description: "오늘보다 성장할 내일을 위한 기록",
-  head: [
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css",
-      },
-    ],
-  ],
+  head: [CONSTANT.LINK_FONT.HACK],
   themeConfig: {
     sidebar: getSidebarArr(),
     nav: [
