@@ -34,18 +34,30 @@ module.exports = {
         color: "#acb1b7",
       },
     ],
+    [
+      "@vuepress/blog",
+      {
+        directories: [
+          {
+            id: "post",
+            dirname: "_posts",
+            path: "/post",
+            itemPermalink: "/post/:year/:month/:day/:slug",
+          },
+        ],
+      },
+    ],
   ],
 };
 
 /** 카테고리 자동 추가 */
 function getSidebarArr() {
   var fs = require("fs");
-  var docsPath = __dirname + "/../";
+  var docsPath = __dirname + "/../_posts";
   var sidebarArr = [];
-  var HomeFilelist = [];
+  var EtcFilelist = [];
   var filelist = fs.readdirSync(docsPath);
   filelist.forEach(function (file) {
-    if (file === ".vuepress") return;
     var stat = fs.lstatSync(docsPath + "/" + file);
     if (stat.isDirectory()) {
       // directory
@@ -56,15 +68,16 @@ function getSidebarArr() {
     } else {
       // NOT directory
       // title is '/' children is file
-      HomeFilelist.push(file);
+      EtcFilelist.push(file);
     }
   });
-  sidebarArr.unshift(makeSidebarObject("", HomeFilelist));
+  sidebarArr.push(makeSidebarObject("", EtcFilelist));
   return sidebarArr;
 }
 
 function makeSidebarObject(folder, mdfileList) {
-  var path = folder ? "/" + folder + "/" : "/";
+  var path = folder ? "/_posts/" + folder + "/" : "/_posts/";
+
   mdfileList = aheadOfReadme(mdfileList);
   var tmpMdfileList = [];
   // remove .md, add Path
@@ -75,6 +88,7 @@ function makeSidebarObject(folder, mdfileList) {
     }
   });
   mdfileList = tmpMdfileList;
+
   // remove folder prefix number
   if (folder) {
     var dotIdx = folder.indexOf(".");
@@ -82,8 +96,9 @@ function makeSidebarObject(folder, mdfileList) {
       ? folder.substr(dotIdx + 1)
       : folder;
   } else {
-    title = "HOME";
+    title = "ETC";
   }
+
   return {
     title: title,
     children: mdfileList,
