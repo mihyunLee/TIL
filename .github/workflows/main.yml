@@ -4,13 +4,16 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_BRANCH: gh-pages
-        BUILD_SCRIPT: yarn && yarn docs:build
-        BUILD_DIR: docs/.vuepress/dist/
+      - name: Switch to fix/EISDIR branch
+        run: git checkout fix/EISDIR
+
+      - name: vuepress-deploy
+        uses: jenkey2011/vuepress-deploy@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          TARGET_BRANCH: test
+          BUILD_SCRIPT: yarn && yarn docs:build
+          BUILD_DIR: docs/.vuepress/dist/
