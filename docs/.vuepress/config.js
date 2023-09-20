@@ -24,6 +24,16 @@ module.exports = {
     },
   },
   plugins: [
+    "@vuepress/last-updated",
+    "@vuepress/back-to-top",
+    [
+      "@vuepress/medium-zoom",
+      {
+        options: {
+          background: "#69696966",
+        },
+      },
+    ],
     [
       "vuepress-plugin-code-copy",
       {
