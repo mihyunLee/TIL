@@ -32,16 +32,16 @@ module.exports = {
     ],
     [
       "@vuepress/blog",
-      {
-        directories: [
-          {
-            id: "post",
-            dirname: "_posts",
-            path: "/post",
-            itemPermalink: "/post/:slug",
-          },
-        ],
-      },
+      // {
+      //   directories: [
+      //     {
+      //       id: "post",
+      //       dirname: "_posts",
+      //       path: "/post",
+      //       itemPermalink: "/post/:slug",
+      //     },
+      //   ],
+      // },
     ],
   ],
 };
