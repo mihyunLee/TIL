@@ -1,7 +1,7 @@
 /** 카테고리 자동 추가 */
 function getSidebarArr() {
   const fs = require("fs");
-  const docsPath = __dirname + "/../_posts";
+  const docsPath = __dirname + "/../_posts/";
   const sidebarArr = [];
   const EtcFilelist = [];
   const filelist = fs.readdirSync(docsPath);
