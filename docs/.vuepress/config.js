@@ -38,7 +38,7 @@ module.exports = {
             id: "post",
             dirname: "_posts",
             path: "/post",
-            itemPermalink: "/post/:year/:month/:day/:slug",
+            itemPermalink: "/post/:slug",
           },
         ],
       },
