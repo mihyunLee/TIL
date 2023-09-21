@@ -36,6 +36,10 @@ h1 span {
   color: #acb1b7;
 }
 
+ul {
+  list-style: none;
+}
+
 li a,
 li span {
   font-family: "Hack", monospace;
