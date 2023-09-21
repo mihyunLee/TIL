@@ -2,7 +2,7 @@
 tags: ["React", "useEffect"]
 ---
 
-# useEffect의 의존성 배열 (dependency array)
+# useEffect 알아보기
 
 <Tags />
 
