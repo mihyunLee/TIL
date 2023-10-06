@@ -21,7 +21,9 @@ function getSidebarArr() {
     }
   });
 
-  sidebarArr.push(makeSidebarObject("", EtcFilelist));
+  if (EtcFilelist.length > 0) {
+    sidebarArr.push(makeSidebarObject("", EtcFilelist));
+  }
 
   return sidebarArr;
 }
@@ -48,7 +50,7 @@ function makeSidebarObject(folder, mdfileList) {
       ? folder.substr(dotIdx + 1)
       : folder;
   } else {
-    title = "ETC";
+    title = "...";
   }
 
   return {
