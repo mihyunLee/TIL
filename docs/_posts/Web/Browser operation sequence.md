@@ -12,7 +12,7 @@ tags: ["Web 지식", "브라우저", "브라우저 동작 순서"]
 
 ## 브라우저 동작 순서
 
-![브라우저 동작 순서 이미지](https://private-user-images.githubusercontent.com/51310674/295059675-9b3b8df1-38da-4e08-a8bb-fbac1a1138a8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDUxNTgxNjQsIm5iZiI6MTcwNTE1Nzg2NCwicGF0aCI6Ii81MTMxMDY3NC8yOTUwNTk2NzUtOWIzYjhkZjEtMzhkYS00ZTA4LWE4YmItZmJhYzFhMTEzOGE4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTEzVDE0NTc0NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTllMTQ1NDRiZGE4YTM1OGRiZWY5YWRjM2MwZDhlOTY3OWM4NWU2Y2RkMzljZjQxMzZiZGVlZmJiNDYxMGJjYTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.nsOFOUd118g4-7ZIRBjeXvwtnHndjIjPZitmv4cVIEM)
+![브라우저 동작 순서 이미지](https://github.com/mihyunLee/TIL/assets/51310674/a9bf5c6d-e1e7-4d08-93e0-731dc546d014)
 
 ### Construction
 
@@ -132,7 +132,7 @@ function consolelog() {
 embedded 스타일의 종료를 알리는 `</style>`을 만났을 때, DOM 파싱이 멈추고 해당 구간의 embedded 스타일을 파싱하여 CSSOM Tree를 업데이트한다. 그 이후에 파싱이 재개된다.
 styleSheet의 경우 embedded, inline 스타일과 다르게 백그라운드에서 완전히 다운로드 받을 수 있어 DOM 파싱을 중단시키지는 않는다.
 
-![CSS가 Render-Blocking일 수 밖에 없는 비교 화면](https://private-user-images.githubusercontent.com/51310674/295072131-3b4239d4-3ca7-4c23-a6ad-8ceb74e47581.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDUxNTgxODcsIm5iZiI6MTcwNTE1Nzg4NywicGF0aCI6Ii81MTMxMDY3NC8yOTUwNzIxMzEtM2I0MjM5ZDQtM2NhNy00YzIzLWE2YWQtOGNlYjc0ZTQ3NTgxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTEzVDE0NTgwN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUwMWYzYjc1ZjkxNWY2OGRjZGZhYTg1MGE0Mzk3OWM4N2I2MGQ4OGI3YjliNmZiMjNiYTY5ZDJiYWQ2NWM0YWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.IZvKKyT_r2gmKoQp08gxWTb4rvNUMPyw_kHYEjrrUm0)
+![CSS가 Render-Blocking일 수 밖에 없는 비교 화면](https://github.com/mihyunLee/TIL/assets/51310674/720c2dc0-6ebc-4d9f-8bdd-77f25845dd26)
 
 CSS는 **Render-Blocking** 자원으로 스타일 요소가 읽히는 동안에는 Render Tree 구성이 중지된다. 이는 CSS가 없으면 사용자는 페이지를 상대적으로 사용하기 어렵기 때문에 브라우저는 DOM과 CSSOM을 모두 사용할 수 있을 때까지 렌더링을 차단한다.
 :::
